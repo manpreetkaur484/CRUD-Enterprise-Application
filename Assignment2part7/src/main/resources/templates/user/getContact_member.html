@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Contact List</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/getContact.css" th:href="@{/css/getContact.css}">
+</head>
+
+<body>
+	<div align="center">
+	<h1>This is MEMBER Page</h1>
+	<br><br>
+		<h1>Contact List</h1>
+		<table>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>PhoneNumber</th>
+				<th>Address</th>
+				<th>Email</th>
+				<th>Role</th>
+				<th>Edit Contacts</th>
+				<th>Delete Contacts</th>
+			</tr>
+			<tr th:each="contact : ${contacts}">
+				<td th:text="${contact.id}"></td>
+				<td th:text="${contact.name}"></td>
+				<td th:text="${contact.phoneNumber}"></td>
+				<td th:text="${contact.address}"></td>
+				<td th:text="${contact.email}"></td>
+				<td th:text="${contact.role}"></td>
+				
+				<td><a href="" th:href="@{/edit/{id}(id=${contact.id})}">EDIT
+				</a></td>
+				<td><a href="" th:href="@{/delete/{id}(id=${contact.id})}">DELETE</a></td>
+			</tr>
+		</table>
+		<br> <a th:href="@{/}">Add Contact</a>
+		<br>
+		<form method="post" th:action="@{/logout}">
+<input type="submit" id="logout-submit" name="logout-submit" value="logout">
+</form>
+	</div>
+</body>
+</html>

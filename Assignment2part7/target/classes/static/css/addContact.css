@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+
+body {
+	background-image: url("../images/m1.jpg");
+	background-size: 100%;
+}
+
+form {
+	margin-top: 150px;
+}
+
+a {
+	font-size: 20px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Register here</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/addContact.css" th:href="@{/css/addContact.css}">
+</head>
+<body>
+
+<div align="center">
+
+<form action="#" th:action="@{/register}" method="post">
+<h1>Register User</h1>
+<br><br>
+Name:<input type="text" name="username">
+<br><br>
+Password:<input type="password" name="password">
+<br><br>
+<input type="checkbox" name="member" value="true"> Member<br>
+<input type="checkbox" name="guest" value="true">Guest<br>
+<input type="checkbox" name="admin" value="true">Admin<br> 
+<br>
+<input type="submit" value="Add User">
+
+</form>
+</div>
+</body>
+
+</html>

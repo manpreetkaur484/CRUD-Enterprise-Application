@@ -1,0 +1,38 @@
+@charset "ISO-8859-1";
+
+body {
+	background-image: url("../images/m1.jpg");
+	background-size: 100%;
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 95%;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+th {
+	text-align: left;
+	padding: 8px;
+}
+
+td {
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(odd) {
+	background-color: #9ACFF2;
+}
+
+tr:nth-child(even) {
+	background-color: #D0F0C0;
+}
+
+a {
+	font-size: 20px;
+}

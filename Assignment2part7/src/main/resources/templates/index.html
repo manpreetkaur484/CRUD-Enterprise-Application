@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Index Page</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/addContact.css" th:href="@{/css/addContact.css}">
+</style>
+</head>
+<body>
+<div align="center">
+<h1>Root Index</h1>
+<h3>This is unsecured page</h3>
+
+<ul>
+<li>Go to <a href="/member" th:href="@{/member}">Member Login here</a></li>
+<br>
+<br>
+<li>Go to <a href="/guest" th:href="@{/guest}">Guest Login here</a></li>
+<br>
+<br>
+<li>Go to <a href="/admin" th:href="@{/admin}">Admin Login here</a></li>
+
+</ul> 
+
+<br>
+<a th:href="@{register}">Register New User</a>
+<br>
+<br>
+<a th:href="@{/}">Go to Home Page</a>
+</div>
+</body>
+</html>

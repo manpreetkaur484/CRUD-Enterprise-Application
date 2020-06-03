@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Assignment2</title>
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/addContact.css" th:href="@{/css/addContact.css}">
+</head>
+<body>
+	<div align="center">
+<!--  
+		<form method="get" action="/add" name="form">
+			<h1>Add Contacts</h1>
+
+			Name: <input type="text" name="name" /> <br>
+			<br> Phone Number: <input type="text" name="phoneNumber" /> <br>
+			<br> Address: <input type="text" name="address" /> <br>
+			<br> Email: <input type="text" name="email" /> <br>
+			<br>
+			Select Role: <select
+						"src/main/resources/templates/addContact.html" name="role"
+						size="1">
+						<option value="ROLE_MEMBER">Member</option>
+						<option value="ROLE_GUEST">Guest</option>
+						<option value="ROLE_ADMIN">Admin</option>
+					</select>
+					<br>
+					<br>
+			<center>
+				<input type="submit" value="Submit" />
+			</center>
+			<br> <a th:href="@{view}">View Contact</a> <br>
+			
+			<br>
+			<a th:href="@{register}">Register New User</a> <br>
+		</form>
+		-->
+		<form  name="form" action="#" th:action="@{/add}" th:object="${contact}" method="get">
+			<h1>Add Contacts</h1>
+           Name: <input type="text" th:field="*{name}" /> <br><br> 
+   Phone Number: <input type="text" th:field="*{phoneNumber}" /> <br><br>
+	    Address: <input type="text" th:field="*{address}" /> <br><br>
+	      Email: <input type="text" th:field="*{email}" /> <br><br>
+	Select Role: <select th:field="*{role}">
+	             <option th:each="r:*{roles}" th:value="${r}" th:text="${r}"/>	
+				 </select><br><br>
+				
+			     <center>
+				  <input type="submit" value="Submit" />
+			     </center><br>
+			     <a th:href="@{view}">View Contact</a> <br>
+			<br>
+			
+			
+			<a th:href="@{register}">Register New User</a> <br>
+		</form>
+	</div>
+</body>
+</html>
